@@ -5,72 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anúncio Smart TV</title>
   <style>
+    :root {
+      --primary-color: #0f172a;
+      --accent-color: #06b6d4;
+      --highlight-color: #38bdf8;
+      --bg-light: #f1f5f9;
+      --text-color: #1e293b;
+      --white: #ffffff;
+    }
+
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #fff;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-color);
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #1298ec;
-      color: #fff;
-      padding: 20px 0;
+      background-color: var(--primary-color);
+      color: var(--white);
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      padding: 30px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
       padding: 20px;
     }
 
     h1, h2, h3 {
-      color: #e63946;
+      color: var(--primary-color);
       margin-top: 30px;
     }
 
     figure {
       text-align: center;
-      margin: 20px 0;
+      margin: 30px 0;
     }
 
     img {
       width: 400px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
     figcaption {
       font-size: 0.95rem;
-      color: #666;
-      margin-top: 5px;
+      color: #64748b;
+      margin-top: 8px;
     }
 
-    a {
+    a.botao-compra {
       display: inline-block;
-      background-color: #2a9d8f;
-      color: white;
+      background: linear-gradient(45deg, var(--accent-color), var(--highlight-color));
+      color: var(--white);
       text-decoration: none;
-      padding: 12px 24px;
-      margin: 20px 0;
+      padding: 14px 28px;
       border-radius: 6px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 20px 0;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    a:hover {
-      background-color: #21867a;
+    a.botao-compra:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     section {
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background-color: var(--white);
+      padding: 24px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
 
     p {
@@ -80,7 +93,7 @@
 
     strong {
       font-size: 1.4rem;
-      color: #d62828;
+      color: var(--accent-color);
     }
 
     em {
@@ -89,22 +102,36 @@
 
     hr {
       border: none;
-      border-top: 2px dashed #ccc;
+      border-top: 2px dashed #cbd5e1;
       margin: 40px 0;
     }
 
     ul {
       margin-left: 20px;
       padding-left: 20px;
-      list-style-type: square;
+      list-style-type: disc;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #ff4c29;
-      color: white;
-      margin-top: 40px;
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    @media (max-width: 600px) {
+      img {
+        width: 100%;
+      }
+
+      a.botao-compra {
+        width: 100%;
+        padding: 12px;
+      }
+
+      .container {
+        padding: 16px;
+      }
     }
   </style>
 </head>
@@ -120,7 +147,7 @@
       <figcaption>Smart TV da marca XYZ</figcaption>
     </figure>
 
-    <a href="#">Quero comprar agora mesmo!</a>
+    <a href="#" class="botao-compra">Quero comprar agora mesmo!</a>
 
     <section>
       <h2>Preço</h2>
@@ -168,7 +195,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Loja de Eletrônicos - Todos os direitos reservados
+    &copy; 2025 Loja Tech - Todos os direitos reservados
   </footer>
 
 </body>
